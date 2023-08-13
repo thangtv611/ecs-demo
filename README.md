@@ -20,3 +20,9 @@ TBD
     + 1 endpoint that return json with hello world
     + log request's headers to console        
 - TBD
+
+
+# TODO
+- [ ] Create infrastructure using Terrafrom
+- [ ] Clean up job
+- [ ] 
