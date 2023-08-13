@@ -1,19 +1,22 @@
 # ecs-demo
-demo deploy nodejs app using aws ecs with custom vpc
-
+Demo how to deploy app to AWS ECS with its infras
 
 # Network
-- Custome VPC
-- Has 3 layer with 2 subnets for each layer (1 subnet for 1 AZ)
-    + Layer Load Balancer (public subnet)
-    + Layer container (using ecs, private subnet)
-    + Layber database (private subnet)
-- Has Internet Gateway
-- Has Router Table
-- Has NACL 
-- Has Security Group
+## Network requirements
+- Custom VPC
+- Has 3 layers with 2 subnets for each (equal 2 AZ for each layer)
+    + Layer 1: Load Balancer (public subnet)
+    + Layer 2: Container (using ecs, private subnet)
+    + Layber 3: Database (private subnet)
+- Has an Internet Gateway
+- Has Router Tables
+- Has NACLs 
+- Has Security Groups
 
+## Network design
+TBD
 # Container
-- Simple express with logging
-- ECS
-
+- Simple express server
+    + 1 endpoint that return json with hello world
+    + log request's headers to console        
+- TBD
